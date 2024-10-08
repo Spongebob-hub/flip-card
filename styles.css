@@ -16,8 +16,8 @@
   }
   
   .container {
-    width: 350px;
-    height: 600px;
+    width: 275px;
+    height: 500px;
     perspective: 800px;
     margin: 20px;
   }
