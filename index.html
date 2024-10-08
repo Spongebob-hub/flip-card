@@ -1,44 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Flip Card</title>
-</head>
-<body>
-  <div class="container">
-    <div class="card">
-      <div class="front">
-        <img src="pic ava 1.png" height="500px" width="275px">
-      </div>
-      <div class="back">
-        <h2>Click "Open" to Download</h2>
-        <a href="https://drive.google.com/file/d/1fd4T_6gh9BcwaMtKv3wlRasCZ_GYuyv7/view?usp=drive_link" class="button">Open</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card">
-      <div class="front">
-        <img src="pic ava 1.png" height="500px" width="275px">
-      </div>
-      <div class="back">
-        <h2>Click "Open" to Download</h2>
-        <a href="https://drive.google.com/file/d/1fd4T_6gh9BcwaMtKv3wlRasCZ_GYuyv7/view?usp=drive_link" class="button">Open</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card">
-      <div class="front">
-        <img src="pic ava 1.png" height="500px" width="275px">
-      </div>
-      <div class="back">
-        <h2>Click "Open" to Download</h2>
-        <a href="https://drive.google.com/file/d/1fd4T_6gh9BcwaMtKv3wlRasCZ_GYuyv7/view?usp=drive_link" class="button">Open</a>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 275px;
+    height: 450px;
+    perspective: 800px;
+    margin: 20px;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-image: url(https://source.unsplash.com/random/350x500);
+  }
+  
+  .back {
+    background-color: green;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: green;
+    text-decoration: none;
+    border: none;
+    border-radius:   
+   5px;
+    cursor: pointer;
+  }
